@@ -24,3 +24,4 @@ public class D784 {
         }
     }
 }
+/*f(n) = */
