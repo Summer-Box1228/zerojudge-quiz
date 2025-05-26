@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 import static java.lang.Long.parseLong;
 
-public class DFExpression {
+public class C_DFExpression {
     public static Scanner scn = new Scanner(System.in);
     public static final String dfexs = scn.next();
     public static final int wh = scn.nextInt();
