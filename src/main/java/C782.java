@@ -23,12 +23,17 @@ public class C782 {
                 wi[j] = scn.nextInt();
             }
             for (int j = 0; j < n; j++) {
-                for (int l = j; l < n; l++) {
+                int res;
+                res = Arrays.binarySearch(pos, pos[j] + k +1);
+                if (res < 0) continue;
+                else {
+                    sum += (long) Arrays.stream(wi).skip(res).sum() * wi[j];
+                }
+                /*for (int l = j; l < n; l++) {
                     if (pos[l] - pos[j] > k) {
-                        sum += (long) Arrays.stream(wi).skip(l).sum() * wi[j];
                         break;
                     }
-                }
+                }*/
             }
             System.out.println(sum);
         }
