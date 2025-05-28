@@ -25,8 +25,10 @@ public class C782 {
             for (int j = 0; j < n; j++) {
                 int res;
                 res = Arrays.binarySearch(pos, pos[j] + k +1);
-                if (res < 0) continue;
-                else {
+                if (-1 * (res + 1) >= pos.length) continue;
+                else if (-1 * (res + 1) < pos.length && res < 0) {
+                    sum += (long) Arrays.stream(wi).skip(-1 * (res + 1)).sum() * wi[j];
+                } else {
                     sum += (long) Arrays.stream(wi).skip(res).sum() * wi[j];
                 }
                 /*for (int l = j; l < n; l++) {
